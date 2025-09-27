@@ -16,7 +16,7 @@ type myHelloServer struct {
 
 func (s *myHelloServer) SayHello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received %v", req.GetName())
-	return &pb.HelloReply{Message: fmt.Sprintf("Hi %v", req.GetName())}, nil
+	return &pb.HelloReply{Message: fmt.Sprintf("Hi %v, welcome to the wizarding world!", req.GetName())}, nil
 }
 
 func main() {
@@ -27,6 +27,7 @@ func main() {
 	serverRegister := grpc.NewServer()
 	service := &myHelloServer{}
 	pb.RegisterGreeterServer(serverRegister, service)
+	log.Printf("starting server and serving requests...")
 	err = serverRegister.Serve(listener)
 	if err != nil {
 		log.Fatalf("Something went wrong: %q", err)
