@@ -4,7 +4,7 @@
 // 	protoc        v6.32.1
 // source: helloworld/hello.proto
 
-package proto
+package helloworld
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -113,15 +113,14 @@ var File_helloworld_hello_proto protoreflect.FileDescriptor
 
 const file_helloworld_hello_proto_rawDesc = "" +
 	"\n" +
-	"\x16helloworld/hello.proto\x12\n" +
-	"helloworld\"\"\n" +
+	"\x16helloworld/hello.proto\"\"\n" +
 	"\fHelloRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\"&\n" +
 	"\n" +
 	"HelloReply\x12\x18\n" +
-	"\amessage\x18\x01 \x01(\tR\amessage2I\n" +
-	"\aGreeter\x12>\n" +
-	"\bSayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"\x00B+Z)github.com/IdentityStolen/HelloGRPC/protob\x06proto3"
+	"\amessage\x18\x01 \x01(\tR\amessage23\n" +
+	"\aGreeter\x12(\n" +
+	"\bSayHello\x12\r.HelloRequest\x1a\v.HelloReply\"\x00B0Z.github.com/IdentityStolen/HelloGRPC/helloworldb\x06proto3"
 
 var (
 	file_helloworld_hello_proto_rawDescOnce sync.Once
@@ -137,12 +136,12 @@ func file_helloworld_hello_proto_rawDescGZIP() []byte {
 
 var file_helloworld_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_helloworld_hello_proto_goTypes = []any{
-	(*HelloRequest)(nil), // 0: helloworld.HelloRequest
-	(*HelloReply)(nil),   // 1: helloworld.HelloReply
+	(*HelloRequest)(nil), // 0: HelloRequest
+	(*HelloReply)(nil),   // 1: HelloReply
 }
 var file_helloworld_hello_proto_depIdxs = []int32{
-	0, // 0: helloworld.Greeter.SayHello:input_type -> helloworld.HelloRequest
-	1, // 1: helloworld.Greeter.SayHello:output_type -> helloworld.HelloReply
+	0, // 0: Greeter.SayHello:input_type -> HelloRequest
+	1, // 1: Greeter.SayHello:output_type -> HelloReply
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

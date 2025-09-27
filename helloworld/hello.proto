@@ -1,8 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/IdentityStolen/HelloGRPC/proto";
-
-package helloworld;
+option go_package = "github.com/IdentityStolen/HelloGRPC/helloworld";
 
 service Greeter {
   // Sends a greeting
