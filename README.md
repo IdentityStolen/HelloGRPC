@@ -11,7 +11,7 @@ git clone https://github.com/IdentityStolen/HelloGRPC
 cd HelloGRPC
 ```
 
-**2. Go plugins for the protocol compiler:**
+**2. Get go plugins for the protocol compiler:**
 
 Install the protocol compiler plugins for Go using the following commands:
 
