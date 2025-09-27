@@ -6,8 +6,10 @@ Simple GRPC go code, greeter service.
 
 **1. clone the repository**
 
-`git clone https://github.com/IdentityStolen/HelloGRPC
-cd HelloGRPC`
+```console
+git clone https://github.com/IdentityStolen/HelloGRPC
+cd HelloGRPC
+```
 
 **2. Go plugins for the protocol compiler:**
 
@@ -23,11 +25,13 @@ Update your PATH so that the protoc compiler can find the plugins:
 export PATH="$PATH:$(go env GOPATH)/bin"
 ```
 
-**3. Run command ```go
-go mod tidy
-``` to install missing dependancies.**
+**3. Run following command to install missing dependancies.**
 
-**4. run following make command to run protoc command that generates go specific code (*.pb.go files)**
+```go
+go mod tidy
+```
+
+**4. run following make command to run `protoc` command that generates go specific code (.pb.go files)**
 
 ```console
 make gen_from_proto
