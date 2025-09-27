@@ -19,17 +19,21 @@ go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 
 Update your PATH so that the protoc compiler can find the plugins:
 
-```markdown
+```go
 export PATH="$PATH:$(go env GOPATH)/bin"
 ```
 
-**3. Run command `go mod tidy` to install missing dependancies.**
+**3. Run command ```go
+go mod tidy
+``` to install missing dependancies.**
 
 **4. run following make command to run protoc command that generates go specific code (*.pb.go files)**
 
-`make gen_from_proto`
+```console
+make gen_from_proto
+```
 
-`5. Now build & run main.go`
+**5. Now build & run main.go**
 
 ```go
 go build ./greeter_server/main.go
